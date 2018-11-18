@@ -21,9 +21,11 @@ public class SimpleMultithreadedServer implements Runnable{
     ServerSocket serverSocket = null;  // Server socket that will listen for incoming connections
     Thread       runningThread = null;
     boolean      isStopped    = false;
+    SimpleClient [] clients = new SimpleClient[5] ; 
 
     public SimpleMultithreadedServer(int port){
         this.serverPort = port;
+        
     }
 
     public void run(){
